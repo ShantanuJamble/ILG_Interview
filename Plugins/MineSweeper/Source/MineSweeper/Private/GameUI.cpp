@@ -193,7 +193,7 @@ TSharedRef<class SBox> FGameUI::GetWindowDetails()
 					.OnTextCommitted_Lambda([this](const FText& NewText, ETextCommit::Type CommitType)
 					{
 						int NewMinesCount = FCString::Atoi(*NewText.ToString());
-						if (NewMinesCount > 0)
+						if (NewMinesCount > 0 && NewMinesCount <= m_CacheColCounter*m_CacheRowCounter)
 						{
 							this->SetMinesCount(NewMinesCount);
 						}

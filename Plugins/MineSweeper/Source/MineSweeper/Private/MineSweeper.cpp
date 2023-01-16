@@ -46,7 +46,7 @@ void FMineSweeperModule::StartupModule()
 
 FReply FMineSweeperModule::OnClickDelegate()
 {
-	UpdateUI();
+	//UpdateUI();
 	return FReply::Handled();
 }
 
@@ -95,14 +95,14 @@ void FMineSweeperModule::UpdateUI()
 		[
 			m_GameUI->ConstructBoard()
 		]
-	+ SVerticalBox::Slot()
+	/*+ SVerticalBox::Slot()
 		.HAlign(HAlign_Left)
 		.AutoHeight()
 		[
 			SNew(SButton)
 			.Text(FText::FromString(TEXT("HIT ME")))
 			.OnClicked(m_OnClickDelegate)
-		]
+		]*/
 	]
 
 	);
@@ -134,14 +134,14 @@ TSharedRef<SDockTab> FMineSweeperModule::OnSpawnPluginTab(const FSpawnTabArgs& S
 				[
 					m_GameUI->ConstructBoard()
 				]
-				+ SVerticalBox::Slot()
+				/*+ SVerticalBox::Slot()
 					.HAlign(HAlign_Left)
 					.AutoHeight()
 					[
 						SNew(SButton)
 						.Text(FText::FromString(TEXT("HIT ME")))
 						.OnClicked(m_OnClickDelegate)
-				]
+				]*/
 			]
 			
 		];
